@@ -1,0 +1,42 @@
+{
+	"version_name": "2.0",
+	"version_code": "20",
+	"min_version_code": "20",
+	"update_url": "https://github.com/AniLabX/XRemoteDesktop/releases",
+	"changelog_en": [
+		"- Full redesign and refactoring",
+		"- Support for English, Russian and Ukrainian interface languages with the ability to change them",
+		"- Support for autostarting the server after startup",
+		"- Support for checking for updates",
+		"- Implementation of XRemotexDiscovery service for easy connection to the server by clients (based on Bonjour protocol)",
+		"- Removed VLCj",
+		"- Support for MPV instead of VLC",
+		"- Support for automatic MPV download on Windows systems and easy installation instructions for Linux/macOS",
+		"- Support for XRemotexRemote for remote player management",
+		"- Advanced player settings"
+	],
+	"changelog_ru": [
+		"- Полный редизайн и рефакторинг",
+		"- Поддержка Английского, Русского и Украинского языков интерфейса с возможностью их смены",
+		"- Поддержка автостарта сервера после запуска",
+		"- Поддержка проверки обновлений",
+		"- Реализация XRemotexDiscovery сервиса для легкого подключения к серверу клиентами (на основе протокола Bonjour)",
+		"- Удален VLCj",
+		"- Поддержка MPV вместо VLC",
+		"- Поддержка автоматического скачивания MPV на Windows системах и инструкции по легкой установке для Linux/macOS",
+		"- Поддержка XRemotexRemote для удаленного управления плеером",
+		"- Расширенные настройки плеера"
+	],
+	"changelog_uk": [
+		"- Повний редизайн і рефакторинг",
+		"- Підтримка Англійської, Російської та Української мов інтерфейсу з можливістю їх зміни",
+		"- Підтримка автостарту сервера після запуску",
+		"- Підтримка перевірки оновлень",
+		"- Реалізація XRemotexDiscovery сервісу для легкого підключення до сервера клієнтами (на основі протоколу Bonjour)",
+		"- Видалено VLCj",
+		"- Підтримка MPV замість VLC",
+		"- Підтримка автоматичного скачування MPV на Windows системах та інструкції з легкого встановлення для Linux/macOS",
+		"- Підтримка XRemotexRemote для віддаленого керування програвачем",
+		"- Розширені налаштування програвача"
+	]
+}
