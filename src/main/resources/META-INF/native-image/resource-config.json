@@ -1,0 +1,74 @@
+{
+  "resources":{
+  "includes":[{
+    "pattern":"\\QMETA-INF/resources/materialdesignicons2/5.8.55/fonts/materialdesignicons-webfont.ttf\\E"
+  }, {
+    "pattern":"\\QMETA-INF/services/org.kordamp.ikonli.IkonHandler\\E"
+  }, {
+    "pattern":"\\QWindows-amd64/lib7-Zip-JBinding.dll\\E"
+  }, {
+    "pattern":"\\QWindows-amd64/sevenzipjbinding-lib.properties\\E"
+  }, {
+    "pattern":"\\Qcom/jfoenix/assets/css/controls/jfx-button.css\\E"
+  }, {
+    "pattern":"\\Qcom/jfoenix/assets/css/controls/jfx-color-picker.css\\E"
+  }, {
+    "pattern":"\\Qcom/jfoenix/assets/css/controls/jfx-dialog-layout.css\\E"
+  }, {
+    "pattern":"\\Qcom/sun/jna/win32-x86-64/jnidispatch.dll\\E"
+  }, {
+    "pattern":"\\Qcss/dark.css\\E"
+  }, {
+    "pattern":"\\Qfxml/Main.fxml\\E"
+  }, {
+    "pattern":"\\Qfxml/preferences/ButtonPreference.fxml\\E"
+  }, {
+    "pattern":"\\Qfxml/preferences/ColorPickerPreference.fxml\\E"
+  }, {
+    "pattern":"\\Qfxml/preferences/InputPreference.fxml\\E"
+  }, {
+    "pattern":"\\Qfxml/preferences/PreferenceSection.fxml\\E"
+  }, {
+    "pattern":"\\Qfxml/preferences/SegmentedButtonPreference.fxml\\E"
+  }, {
+    "pattern":"\\Qfxml/preferences/SliderPreference.fxml\\E"
+  }, {
+    "pattern":"\\Qfxml/preferences/SwitchPreference.fxml\\E"
+  }, {
+    "pattern":"\\Qimages/remote_128.png\\E"
+  }, {
+    "pattern":"\\Qimages/remote_256.png\\E"
+  }, {
+    "pattern":"\\Qimages/round_play_circle_48.png\\E"
+  }, {
+    "pattern":"\\Qimages/round_stop_circle_48.png\\E"
+  }, {
+    "pattern":"\\Qio/github/palexdev/materialfx/css/MFXProgressSpinner.css\\E"
+  }, {
+    "pattern":"\\Qio/github/palexdev/materialfx/css/MFXToggleButton.css\\E"
+  }, {
+    "pattern":"\\Qorg/controlsfx/control/segmentedbutton.css\\E"
+  }, {
+    "pattern":"\\Qorg/slf4j/impl/StaticLoggerBinder.class\\E"
+  }, {
+    "pattern":"\\Qsevenzipjbinding-platforms.properties\\E"
+  }, {
+    "pattern":"\\Qversion.properties\\E"
+  }]},
+  "bundles":[{
+    "name":"com.sun.javafx.tk.quantum.QuantumMessagesBundle",
+    "locales":["", "und"]
+  }, {
+    "name":"com.sun.org.apache.xml.internal.serializer.XMLEntities",
+    "locales":["und"]
+  }, {
+    "name":"com/sun/glass/ui/win/themes",
+    "locales":["und"]
+  }, {
+    "name":"com/sun/javafx/scene/control/skin/resources/controls",
+    "locales":["", "und"]
+  }, {
+    "name":"strings",
+    "locales":["", "ru", "uk", "und"]
+  }]
+}

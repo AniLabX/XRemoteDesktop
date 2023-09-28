@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<fx:root xmlns:fx="http://javafx.com/fxml/1" fx:id="vbRoot" alignment="CENTER_LEFT"
+         type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/11.0.14-internal">
+    <Label fx:id="lblHeader" style="-fx-font-weight: bold; -fx-font-size: 24" textFill="WHITE">
+        <VBox.margin>
+            <Insets left="6.0" right="6.0"/>
+        </VBox.margin>
+    </Label>
+</fx:root>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.crazyxacker.apps.xremote.controls.preferences.*?>
+<?import com.crazyxacker.apps.xremote.layout.*?>
+<?import com.jfoenix.controls.*?>
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<StackPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="550.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crazyxacker.apps.xremote.controller.MainController">
+    <BorderPane>
+        <center>
+            <SplitPane dividerPositions="0.27" StackPane.alignment="CENTER">
+                <items>
+                    <BorderPane SplitPane.resizableWithParent="false">
+                        <center>
+                            <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+                                <padding>
+                                    <Insets bottom="24.0" left="12.0" right="12.0" top="24.0" />
+                                </padding>
+                                <children>
+                                    <!-- Port -->
+                                    <InputGroup fx:id="igPort" maxHeight="-Infinity" maxWidth="-Infinity" VBox.vgrow="ALWAYS">
+                                        <children>
+                                            <Button minHeight="40" onAction="#resetPort" styleClass="button-icon">
+                                                <graphic>
+                                                    <FontIcon iconLiteral="mdi2s-serial-port" iconSize="40" />
+                                                </graphic>
+                                            </Button>
+                                            <TextField fx:id="tfPort" maxWidth="1.7976931348623157E308" minHeight="40" minWidth="-Infinity" promptText="%gui.port.conf" style="-fx-font-size: 18">
+                                                <tooltip>
+                                                    <Tooltip text="%gui.port.conf" />
+                                                </tooltip>
+                                            </TextField>
+                                        </children>
+                                    </InputGroup>
+
+                                    <!-- Autostart -->
+                                    <MFXToggleButton fx:id="tbAutostart" maxHeight="40.0" minHeight="40.0" text="%gui.settings.xremote.autostart">
+                                        <VBox.margin>
+                                            <Insets top="12.0" />
+                                        </VBox.margin>
+                                    </MFXToggleButton>
+
+                                    <!-- Server info -->
+                                    <StackPane fx:id="spServerInfo" maxHeight="250.0" maxWidth="250.0" style="-fx-border-color: gray; -fx-border-width: 2; -fx-border-radius: 12;">
+                                        <children>
+                                            <MFXProgressSpinner maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" startingAngle="-120.0" />
+                                            <ImageView fx:id="ivQRServerIp" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
+                                        </children>
+                                    </StackPane>
+                                    <InputGroup fx:id="igServerInfo" maxHeight="-Infinity" maxWidth="-Infinity" VBox.vgrow="ALWAYS">
+                                        <children>
+                                            <TextField fx:id="tfServerIp" minHeight="40" style="-fx-font-size: 18" />
+                                            <Button minHeight="40" onAction="#copyServerIp" styleClass="button-icon">
+                                                <graphic>
+                                                    <FontIcon iconLiteral="mdi2c-content-copy" iconSize="40" />
+                                                </graphic>
+                                            </Button>
+                                        </children>
+                                        <VBox.margin>
+                                            <Insets top="12.0" />
+                                        </VBox.margin>
+                                    </InputGroup>
+                                </children>
+                            </VBox>
+                        </center>
+                        <bottom>
+                            <!-- Start/Stop button -->
+                            <JFXButton fx:id="btnStartStop" contentDisplay="CENTER" onAction="#startStopServer" prefHeight="80.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-radius: 60; -fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: #0a84ff;" text=" " textAlignment="CENTER" BorderPane.alignment="CENTER">
+                                <graphic>
+                                    <ImageView fx:id="ivStartStop" fitHeight="48.0" fitWidth="48.0">
+                                        <image>
+                                            <Image url="@../images/round_play_circle_48.png" />
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <BorderPane.margin>
+                                    <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                                </BorderPane.margin>
+                            </JFXButton>
+                        </bottom>
+                        <top>
+                            <StackPane minHeight="-Infinity" prefHeight="135.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+                                <children>
+                                    <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../images/logo.png" />
+                                        </image>
+                                    </ImageView>
+                                    <Label fx:id="lblAPIVersion" style="-fx-font-size: 14; -fx-font-weight: bold; -fx-opacity: 0.5" text=" " StackPane.alignment="TOP_RIGHT">
+                                        <StackPane.margin>
+                                            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                        </StackPane.margin>
+                                    </Label>
+                                </children>
+                            </StackPane>
+                        </top>
+                    </BorderPane>
+                    <ScrollPane fitToHeight="true" fitToWidth="true" SplitPane.resizableWithParent="false">
+                        <VBox>
+                            <children>
+                                <!-- Settings -->
+                                <VBox fx:id="vbSettings" spacing="24.0">
+                                    <!-- Main Settings -->
+                                    <PreferenceSection header="XRemote" spacing="8.0" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                        <!-- App Language -->
+                                        <SegmentedButtonPreference fx:id="sbpAppLanguage" summary="%gui.settings.default_language.summary" title="%gui.settings.default_language" />
+                                    </PreferenceSection>
+
+                                    <!-- MPV -->
+                                    <PreferenceSection header="%gui.settings" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                        <ButtonPreference fx:id="bpMPVPlayer" buttonStyle="-fx-background-color: #0a84ff; -fx-font-size: 13" summary="Version: -" title="MPV Player" />
+                                    </PreferenceSection>
+
+                                    <!-- Player -->
+                                    <PreferenceSection header="%gui.settings.player" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                        <SwitchPreference fx:id="swLaunchInFullscreen" summaryOff="%gui.settings.player.launch_in_fullscreen.summary_off" summaryOn="%gui.settings.player.launch_in_fullscreen.summary_on" title="%gui.settings.player.launch_in_fullscreen" />
+                                        <SegmentedButtonPreference fx:id="sbpLaunchOnScreen" summary="%gui.settings.player.launch_on_screen.summary" title="%gui.settings.player.launch_on_screen" />
+                                        <SwitchPreference fx:id="swLaunchOnTop" summaryOff="%gui.settings.player.launch_on_top.summary_off" summaryOn="%gui.settings.player.launch_on_top.summary_on" title="%gui.settings.player.launch_on_top" />
+                                    </PreferenceSection>
+
+                                    <!-- Watching -->
+                                    <PreferenceSection header="%gui.settings.watching" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                        <!-- Speed -->
+                                        <SegmentedButtonPreference fx:id="sbpSpeed" summary="%gui.settings.player.speed.summary" title="%gui.settings.player.speed" />
+                                    </PreferenceSection>
+
+                                    <!-- Audio -->
+                                    <PreferenceSection header="%gui.settings.audio" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                        <!-- Volume -->
+                                        <SliderPreference fx:id="spVolume" max="130" min="0" summary="%gui.settings.player.volume.summary" title="%gui.settings.player.volume" />
+                                        <!-- Mute -->
+                                        <SwitchPreference fx:id="spMute" summary="%gui.settings.player.mute.summary" title="%gui.settings.player.mute" />
+                                    </PreferenceSection>
+
+                                    <!-- Subtitles -->
+                                    <PreferenceSection header="%gui.settings.subtitles" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                        <!-- Priority subtitle type -->
+                                        <SegmentedButtonPreference fx:id="sbpPrioritySubtitleType" summary="%gui.settings.player.priority_subtitle_type.summary" title="%gui.settings.player.priority_subtitle_type" />
+                                        <!-- Font size -->
+                                        <InputPreference fx:id="ipSubtitlesFontSize" inputWidth="50" summary="%gui.settings.player.subtitles_font_size.summary" title="%gui.settings.player.subtitles_font_size" />
+                                        <!-- Font background color -->
+                                        <ColorPickerPreference fx:id="cppFontBackColor" summary="%gui.settings.player.subtitles_back_color.summary" title="%gui.settings.player.subtitles_back_color" />
+                                    </PreferenceSection>
+
+                                    <padding>
+                                        <Insets bottom="8.0" left="16.0" right="16.0" top="8.0" />
+                                    </padding>
+                                </VBox>
+
+                                <!-- Server logs -->
+                                <StackPane fx:id="spLogs" alignment="TOP_RIGHT" VBox.vgrow="ALWAYS">
+                                    <TextArea fx:id="taLog" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: WHITE;" StackPane.alignment="CENTER" />
+                                    <Button minHeight="40" onAction="#copyLogs" prefWidth="40.0" styleClass="button-icon">
+                                        <graphic>
+                                            <FontIcon iconLiteral="mdi2c-content-copy" iconSize="40" />
+                                        </graphic>
+                                        <StackPane.margin>
+                                            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                                        </StackPane.margin>
+                                    </Button>
+                                    <Button minHeight="40" onAction="#clearLogs" prefWidth="40.0" styleClass="button-icon" StackPane.alignment="BOTTOM_RIGHT">
+                                        <graphic>
+                                            <FontIcon iconLiteral="mdi2d-delete-sweep-outline" iconSize="40" />
+                                        </graphic>
+                                        <StackPane.margin>
+                                            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                                        </StackPane.margin>
+                                    </Button>
+                                </StackPane>
+                            </children>
+                        </VBox>
+                    </ScrollPane>
+                </items>
+            </SplitPane>
+        </center>
+        <bottom>
+            <VBox fx:id="vbProgress">
+                <Label fx:id="lblProgress" style="-fx-font-weight: bold" />
+                <ProgressBar fx:id="pbProgress" maxWidth="1.7976931348623157E308" />
+            </VBox>
+        </bottom>
+    </BorderPane>
+</StackPane>

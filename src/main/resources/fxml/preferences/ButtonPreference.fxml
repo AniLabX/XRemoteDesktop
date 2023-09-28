@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<fx:root xmlns:fx="http://javafx.com/fxml/1" fx:id="root" alignment="CENTER_LEFT" spacing="10.0"
+         styleClass="border-transparent" type="javafx.scene.layout.HBox"
+         xmlns="http://javafx.com/javafx/11.0.14-internal">
+    <VBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+        <children>
+            <Label fx:id="lblName" maxWidth="1.7976931348623157E308" style="-fx-font-size: 15; -fx-font-weight: bold"
+                   textFill="WHITE"
+                   HBox.hgrow="ALWAYS"/>
+            <Label fx:id="lblSummary" layoutX="10.0" layoutY="20.0" maxWidth="1.7976931348623157E308"
+                   style="-fx-font-size: 11" textAlignment="JUSTIFY" wrapText="true" textFill="WHITE"/>
+        </children>
+    </VBox>
+    <JFXButton fx:id="button" layoutX="312.0" layoutY="10.0" ripplerFill="WHITE" style="-fx-font-size: 13"
+               textFill="#ecf0f1">
+        <padding>
+            <Insets bottom="6.0" left="10.0" right="10.0" top="6.0"/>
+        </padding>
+    </JFXButton>
+    <padding>
+        <Insets bottom="4.0" left="6.0" right="4.0" top="4.0"/>
+    </padding>
+</fx:root>

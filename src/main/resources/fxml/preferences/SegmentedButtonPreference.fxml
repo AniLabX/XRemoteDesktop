@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.SegmentedButton?>
+<fx:root xmlns:fx="http://javafx.com/fxml/1" fx:id="root" alignment="CENTER_LEFT" spacing="10.0"
+         styleClass="border-transparent" type="javafx.scene.layout.VBox"
+         xmlns="http://javafx.com/javafx/11.0.14-internal">
+    <VBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+        <children>
+            <Label fx:id="lblName" maxWidth="1.7976931348623157E308" style="-fx-font-size: 15; -fx-font-weight: bold"
+                   textFill="WHITE" HBox.hgrow="ALWAYS"/>
+            <Label fx:id="lblSummary" layoutX="10.0" layoutY="20.0" maxWidth="1.7976931348623157E308"
+                   minHeight="-Infinity" style="-fx-font-size: 11" textAlignment="JUSTIFY" textFill="WHITE"
+                   wrapText="true" VBox.vgrow="ALWAYS"/>
+        </children>
+    </VBox>
+    <SegmentedButton fx:id="segmentedButton" maxWidth="-Infinity" minWidth="-Infinity" HBox.hgrow="ALWAYS"/>
+    <padding>
+        <Insets bottom="4.0" left="6.0" right="4.0" top="4.0"/>
+    </padding>
+</fx:root>
