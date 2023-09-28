@@ -53,7 +53,7 @@ and mark file as executable:
 
 *Note: `binary` version of app will work only on `x86_64` systems (and, maybe, on `ARM Mac` with `Rosetta`)! `JAR` version is [WORA](https://en.wikipedia.org/wiki/Write_once,_run_anywhere)*
 
-- Download latest binary file for your system from [Release](https://github.com/AniLabX/XRemoteDesktop/releases)
+- Download latest binary file for your system from [Releases](https://github.com/AniLabX/XRemoteDesktop/releases)
 - Put it in desired location (*Note: it can be launched from any location, but app will create /bin folder next to itself*)
 - Refer to **Prerequisites** section and read info about how to prepare for launch on your system
 - Launch as normal app by double-clicking or in `Terminal` with ```./XRemote``` command for `binary` version or with ```java -jar Xremote.jar``` command for `JAR` version
