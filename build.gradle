@@ -7,9 +7,10 @@ buildscript {
     }
     dependencies {
         classpath "gradle.plugin.com.github.johnrengelman:shadow:7.1.2"
-        classpath 'io.franzbecker:gradle-lombok:5.0.0'
+        classpath 'io.freefair.gradle:lombok-plugin:8.3'
         classpath 'org.openjfx:javafx-plugin:0.0.14'
-        classpath 'com.gluonhq:gluonfx-gradle-plugin:1.0.19'
+        classpath 'com.gluonhq:gluonfx-gradle-plugin:1.0.21'
+        classpath 'org.gradlex:extra-java-module-info:1.4.2'
     }
 }
 
@@ -18,14 +19,20 @@ apply plugin: 'application'
 apply plugin: 'idea'
 
 apply plugin: 'com.github.johnrengelman.shadow'
-apply plugin: 'io.franzbecker.gradle-lombok'
+apply plugin: 'io.freefair.lombok'
 apply plugin: 'org.openjfx.javafxplugin'
 apply plugin: 'com.gluonhq.gluonfx-gradle-plugin'
+apply plugin: 'org.gradlex.extra-java-module-info'
 
 applicationName = 'XRemote Server'
 group = 'com.crazyxacker.apps'
 mainClassName = 'com.crazyxacker.apps.xremote.FXRunner'
 version = '2.0'
+
+application {
+    mainModule = 'XRemote'
+    mainClass = 'com.crazyxacker.apps.xremote.FXRunner'
+}
 
 compileJava.options.encoding = 'UTF-8'
 System.setProperty('file.encoding', 'UTF-8')
@@ -71,12 +78,109 @@ javafx {
     modules = ['javafx.base', 'javafx.controls', 'javafx.fxml', 'javafx.graphics']
 }
 
+extraJavaModuleInfo {
+    // Annotations
+    module('annotations-13.0.jar', 'annotations', '13.0') {
+        exportAllPackages()
+    }
+
+    // Kotlin
+    module('kotlin-stdlib-1.5.21.jar', 'kotlin.stdlib', '1.5.21') {
+        mergeJar('org.jetbrains.kotlin:kotlin-stdlib-common')
+        exportAllPackages()
+    }
+
+    // JNA
+    module('jna-5.13.0.jar', 'jna', '5.13.0') {
+        exportAllPackages()
+        requires('java.logging')
+    }
+    module('jna-platform-5.13.0.jar', 'jna.platform', '5.13.0') {
+        exportAllPackages()
+        requires('jna')
+    }
+
+    // JavaFX
+    module('virtualizedfx-11.2.4.jar', 'virtualizedfx', '11.2.4') {
+        exportAllPackages()
+    }
+
+    // RXJava
+    module('rxjava-2.2.19.jar', 'io.reactivex.rxjava2', '2.2.19') {
+        exportAllPackages()
+        requires('org.reactivestreams')
+    }
+    module('rxjavafx-2.2.2.jar', 'rxjavafx', '2.2.2') {
+        exportAllPackages()
+        requires('javafx.graphics')
+        requires('io.reactivex.rxjava2')
+    }
+    module('rxbonjour-2.0.0-RC1.jar', 'rxbonjour', '2.0.0') {
+        mergeJar('de.mannodermaus.rxjava2:rxbonjour-driver-jmdns')
+        mergeJar('rxbonjour-platform-desktop')
+        exportAllPackages()
+        requires('jmdns')
+        requires('kotlin.stdlib')
+        requires('io.reactivex.rxjava2')
+    }
+    module('rxbonjour-platform-desktop-2.0.0-RC1.jar', 'rxbonjour.platform.desktop', '2.0.0') {
+        exportAllPackages()
+        requires('rxbonjour')
+        requires('jmdns')
+        requires('kotlin.stdlib')
+        requires('io.reactivex.rxjava2')
+    }
+    module('jmdns-3.5.2.jar', 'jmdns', '3.5.2') {
+        exportAllPackages()
+        requires('slf4j.api')
+    }
+
+    // OkHttp/Okio
+    module('okhttp-3.14.9.jar', 'okhttp3', '3.14.9') {
+        exportAllPackages()
+        requires('java.logging')
+        requires('okio')
+    }
+    module('logging-interceptor-3.14.9.jar', 'okhttp3.logging', '3.14.9') {
+        exportAllPackages()
+    }
+    module('okio-1.17.2.jar', 'okio', '1.17.2') {
+        exportAllPackages()
+        requires('java.logging')
+    }
+
+    // SevenZip
+    module('sevenzipjbinding-16.02-2.01.jar', 'sevenzipjbinding', '16.02-2.01') {
+        mergeJar('net.sf.sevenzipjbinding:sevenzipjbinding-all-platforms')
+        exportAllPackages()
+    }
+
+    // Apache Commons
+    module('commons-io-2.7.jar', 'org.apache.commons.io', '2.7') {
+        exportAllPackages()
+    }
+
+    // Natural Comparator
+    module('natural-comparator-1.1.jar', 'natural.comparator', '1.1') {
+        exportAllPackages()
+    }
+
+    // Logging
+    module('slf4j-api-1.7.25.jar', 'slf4j.api', '1.7.25') {
+        exportAllPackages()
+    }
+    module('slf4j-nop-1.7.25.jar', 'slf4j.nop', '1.7.25') {
+        exportAllPackages()
+    }
+}
+
 dependencies {
     // AnnotationsProcessors
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    implementation 'org.projectlombok:lombok:1.18.30'
 
-    // SubstrateVM features
-    compileOnly 'org.graalvm.nativeimage:svm:23.1.0'
+    // Kotlin
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.5.21'
 
     // JNA
     implementation 'net.java.dev.jna:jna:5.13.0'
@@ -84,8 +188,10 @@ dependencies {
 
     // JavaFX
     implementation 'com.jfoenix:jfoenix:9.0.10'
-    implementation 'org.controlsfx:controlsfx:9.0.0'
-    implementation 'io.github.palexdev:materialfx:11.13.2'
+    implementation 'org.controlsfx:controlsfx:11.1.2'
+    implementation('io.github.palexdev:materialfx:11.13.2') {
+        exclude group: 'com.vanniktech', module: 'gradle-maven-publish-plugin'
+    }
 
     // Ikonli
     implementation 'org.kordamp.ikonli:ikonli-javafx:12.3.1'
@@ -104,9 +210,8 @@ dependencies {
     implementation 'de.mannodermaus.rxjava2:rxbonjour-driver-jmdns:2.0.0-RC1'
 
     // OkHttp3
-    implementation 'com.squareup.okhttp3:okhttp:3.12.3'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.3'
-    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.3'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.9'
 
     // Apache Commons
     implementation 'commons-io:commons-io:2.7'
@@ -129,11 +234,6 @@ jar {
 }
 
 run {
-    List<String> args = new ArrayList<String>() {{
-        add("--add-opens=java.base/java.lang.reflect=ALL-UNNAMED")
-        add("--add-exports=javafx.base/com.sun.javafx.runtime=ALL-UNNAMED")
-    }}
-
-    applicationDefaultJvmArgs = args
-    jvmArgs = args
+    applicationDefaultJvmArgs = getArgs()
+    jvmArgs = getArgs()
 }
