@@ -42,14 +42,7 @@ public class FXApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        if (JavaHelper.inNativeImage() && JavaHelper.Platform.isMac()) {
-            // On MacOS there is some strange error with JNI/JNA libs in Native Image mode that prevents app from launching
-            // Catching all Throwable instances is a workaround. App will launch as expected and rethrow any Throwable
-            // that is not instance of UnsatisfiedLinkError
-            safeStartInternal(primaryStage);
-        } else {
-            startInternal(primaryStage);
-        }
+        safeStartInternal(primaryStage);
     }
 
     private void safeStartInternal(Stage primaryStage) throws Exception {
@@ -95,6 +88,7 @@ public class FXApp extends Application {
     private void loadSevenZip() {
         try {
             SevenZip.initSevenZipFromPlatformJAR(SevenZip.getPlatformBestMatch(), new File(Workspace.BIN_DIR));
+            System.out.println("SevenZip was loaded successfully!");
         } catch (Throwable e) {
             e.printStackTrace();
             System.err.println("Unable to load SevenZip!");
