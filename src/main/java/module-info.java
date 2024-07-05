@@ -1,6 +1,6 @@
 open module XRemote {
     // GraalVM
-    requires org.graalvm.sdk;
+    requires org.graalvm.nativeimage;
 
     // JNA
     requires jna;
