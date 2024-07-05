@@ -50,10 +50,10 @@ open module XRemote {
     requires natural.comparator;
 
     // Exports
-    exports com.crazyxacker.apps.xremote;
-    exports com.crazyxacker.apps.xremote.controller to javafx.fxml;
-    exports com.crazyxacker.apps.xremote.layout to javafx.fxml;
-    exports com.crazyxacker.apps.xremote.controls to javafx.fxml;
-    exports com.crazyxacker.apps.xremote.controls.preferences to javafx.fxml;
-    exports com.crazyxacker.apps.xremote.models to com.google.gson;
+    exports xyz.xremote;
+    exports xyz.xremote.controller to javafx.fxml;
+    exports xyz.xremote.layout to javafx.fxml;
+    exports xyz.xremote.controls to javafx.fxml;
+    exports xyz.xremote.controls.preferences to javafx.fxml;
+    exports xyz.xremote.models to com.google.gson;
 }

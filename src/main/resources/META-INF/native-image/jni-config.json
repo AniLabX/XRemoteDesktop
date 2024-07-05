@@ -9,11 +9,11 @@
   "name":"[Ljava.lang.String;"
 },
 {
-  "name":"com.crazyxacker.apps.xremote.FXRunner",
+  "name":"xyz.xremote.FXRunner",
   "methods":[{"name":"main","parameterTypes":["java.lang.String[]"] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.helpers.SevenZip$SevenZipOutputStream",
+  "name":"xyz.xremote.helpers.SevenZip$SevenZipOutputStream",
   "methods":[{"name":"write","parameterTypes":["byte[]"] }]
 },
 {

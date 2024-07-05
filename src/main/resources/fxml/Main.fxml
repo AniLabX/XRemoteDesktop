@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.crazyxacker.apps.xremote.controls.preferences.*?>
-<?import com.crazyxacker.apps.xremote.layout.*?>
+<?import xyz.xremote.controls.preferences.*?>
+<?import xyz.xremote.layout.*?>
 <?import com.jfoenix.controls.*?>
 <?import io.github.palexdev.materialfx.controls.*?>
 <?import javafx.geometry.*?>
@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.*?>
 <?import org.kordamp.ikonli.javafx.*?>
 
-<StackPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="550.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crazyxacker.apps.xremote.controller.MainController">
+<StackPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="550.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.xremote.controller.MainController">
     <BorderPane>
         <center>
             <SplitPane dividerPositions="0.27" StackPane.alignment="CENTER">
@@ -109,7 +109,12 @@
                                     <PreferenceSection header="XRemote" spacing="8.0" textFill="WHITE" VBox.vgrow="ALWAYS">
                                         <!-- App Language -->
                                         <SegmentedButtonPreference fx:id="sbpAppLanguage" summary="%gui.settings.default_language.summary" title="%gui.settings.default_language" />
+
+                                        <!-- Bonjour -->
+                                        <InputPreference fx:id="ipAppName" title="%gui.settings.xremote.app_name" inputWidth="100"
+                                                         summary="%gui.settings.xremote.app_name.summary"/>
                                     </PreferenceSection>
+
 
                                     <!-- MPV -->
                                     <PreferenceSection header="%gui.settings" textFill="WHITE" VBox.vgrow="ALWAYS">
@@ -145,6 +150,20 @@
                                         <InputPreference fx:id="ipSubtitlesFontSize" inputWidth="50" summary="%gui.settings.player.subtitles_font_size.summary" title="%gui.settings.player.subtitles_font_size" />
                                         <!-- Font background color -->
                                         <ColorPickerPreference fx:id="cppFontBackColor" summary="%gui.settings.player.subtitles_back_color.summary" title="%gui.settings.player.subtitles_back_color" />
+                                    </PreferenceSection>
+
+                                    <!-- User arguments -->
+                                    <PreferenceSection header="%gui.settings.custom_arguments" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                        <VBox fx:id="vbMPVArgumentsWarn" style="-fx-border-width: 2px; -fx-border-color: #c0392b; -fx-border-radius: 8;">
+                                            <padding>
+                                                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets left="6.0" right="6.0" />
+                                            </VBox.margin>
+                                        </VBox>
+                                        <!-- User arguments -->
+                                        <InputPreference fx:id="ipUserArguments" title="%gui.prompt.separate_by_space" inputWidth="700"/>
                                     </PreferenceSection>
 
                                     <padding>

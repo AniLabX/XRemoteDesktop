@@ -25,13 +25,13 @@ apply plugin: 'com.gluonhq.gluonfx-gradle-plugin'
 apply plugin: 'org.gradlex.extra-java-module-info'
 
 applicationName = 'XRemote Server'
-group = 'com.crazyxacker.apps'
-mainClassName = 'com.crazyxacker.apps.xremote.FXRunner'
-version = '2.0'
+group = 'xyz.xremote'
+mainClassName = 'xyz.xremote.FXRunner'
+version = '3.0'
 
 application {
     mainModule = 'XRemote'
-    mainClass = 'com.crazyxacker.apps.xremote.FXRunner'
+    mainClass = 'xyz.xremote.FXRunner'
 }
 
 compileJava.options.encoding = 'UTF-8'
@@ -74,7 +74,7 @@ nativeBuild {
 }
 
 javafx {
-    version = '20'
+    version = '22'
     modules = ['javafx.base', 'javafx.controls', 'javafx.fxml', 'javafx.graphics']
 }
 
@@ -229,7 +229,7 @@ jar {
         attributes 'Implementation-Title': 'XRemote Server',
                 'Implementation-Version': version,
                 'Main-Class': mainClassName,
-                'Built-By': 'CrazyXacker'
+                'Built-By': 'AniLabX Team'
     }
 }
 

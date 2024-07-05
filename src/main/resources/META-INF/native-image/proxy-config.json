@@ -1,6 +1,6 @@
 [
   {
-    "interfaces":["com.crazyxacker.apps.xremote.jna.StageOps$DwmSupport"]
+    "interfaces":["xyz.xremote.jna.StageOps$DwmSupport"]
   },
   {
     "interfaces":["com.sun.jna.platform.win32.User32"]

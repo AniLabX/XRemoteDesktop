@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.crazyxacker.apps.xremote.controls.JFXDefaultColorPicker?>
+<?import xyz.xremote.controls.JFXDefaultColorPicker?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.*?>

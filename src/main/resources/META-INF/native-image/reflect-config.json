@@ -16,121 +16,135 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.FXApp",
+  "name":"xyz.xremote.FXApp",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.controller.MainController",
+  "name":"xyz.xremote.controller.MainController",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"initialize","parameterTypes":[] }, {"name":"startStopServer","parameterTypes":[] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.controls.JFXDefaultColorPicker",
+  "name":"xyz.xremote.controls.JFXDefaultColorPicker",
   "queryAllDeclaredMethods":true,
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.controls.preferences.ButtonPreference",
+  "name":"xyz.xremote.controls.preferences.ButtonPreference",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"initialize","parameterTypes":[] }, {"name":"setButtonStyle","parameterTypes":["java.lang.String"] }, {"name":"setSummary","parameterTypes":["java.lang.String"] }, {"name":"setTitle","parameterTypes":["java.lang.String"] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.controls.preferences.ColorPickerPreference",
+  "name":"xyz.xremote.controls.preferences.ColorPickerPreference",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"initialize","parameterTypes":[] }, {"name":"setSummary","parameterTypes":["java.lang.String"] }, {"name":"setTitle","parameterTypes":["java.lang.String"] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.controls.preferences.InputPreference",
+  "name":"xyz.xremote.controls.preferences.InputPreference",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"initialize","parameterTypes":[] }, {"name":"setInputWidth","parameterTypes":["double"] }, {"name":"setSummary","parameterTypes":["java.lang.String"] }, {"name":"setTitle","parameterTypes":["java.lang.String"] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.controls.preferences.PreferenceSection",
+  "name":"xyz.xremote.controls.preferences.PreferenceSection",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"initialize","parameterTypes":[] }, {"name":"setHeader","parameterTypes":["java.lang.String"] }, {"name":"setTextFill","parameterTypes":["javafx.scene.paint.Paint"] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.controls.preferences.SegmentedButtonPreference",
+  "name":"xyz.xremote.controls.preferences.SegmentedButtonPreference",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"initialize","parameterTypes":[] }, {"name":"setSummary","parameterTypes":["java.lang.String"] }, {"name":"setTitle","parameterTypes":["java.lang.String"] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.controls.preferences.SliderPreference",
+  "name":"xyz.xremote.controls.preferences.SliderPreference",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"initialize","parameterTypes":[] }, {"name":"setMax","parameterTypes":["double"] }, {"name":"setMin","parameterTypes":["double"] }, {"name":"setSummary","parameterTypes":["java.lang.String"] }, {"name":"setTitle","parameterTypes":["java.lang.String"] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.controls.preferences.SwitchPreference",
+  "name":"xyz.xremote.controls.preferences.SwitchPreference",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"initialize","parameterTypes":[] }, {"name":"setSummary","parameterTypes":["java.lang.String"] }, {"name":"setSummaryOff","parameterTypes":["java.lang.String"] }, {"name":"setSummaryOn","parameterTypes":["java.lang.String"] }, {"name":"setTitle","parameterTypes":["java.lang.String"] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.layout.InputGroup",
+  "name":"xyz.xremote.layout.InputGroup",
   "queryAllDeclaredMethods":true,
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.models.AppUpdate",
+  "name":"xyz.xremote.models.AppUpdate",
   "allDeclaredFields":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.models.data.LinkItem",
+  "name":"xyz.xremote.models.data.LinkItem",
   "allDeclaredFields":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.models.data.ParseLink",
+  "name":"xyz.xremote.models.data.ParseLink",
   "allDeclaredFields":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.models.data.Subtitles",
+  "name":"xyz.xremote.models.data.EpisodeFiles",
   "allDeclaredFields":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.models.remote.XRemoteData",
+  "name":"xyz.xremote.models.data.Subtitles",
   "allDeclaredFields":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.models.remote.XRemotePlayInfo",
+  "name":"xyz.xremote.models.remote.XRemoteData",
   "allDeclaredFields":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.models.remote.XRemoteResponseData",
+  "name":"xyz.xremote.models.remote.XRemotePlayData",
   "allDeclaredFields":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"com.crazyxacker.apps.xremote.remote.XRemoteCommand",
+  "name":"xyz.xremote.models.remote.XRemotePlayInfo",
+  "allDeclaredFields":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"xyz.xremote.models.remote.XRemoteResponseData",
+  "allDeclaredFields":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"xyz.xremote.remote.XRemoteClientType",
+  "allDeclaredFields":true
+},
+  {
+  "name":"xyz.xremote.remote.XRemoteCommand",
   "allDeclaredFields":true
 },
 {
-  "name":"com.crazyxacker.apps.xremote.remote.XRemotePlayCommand",
+  "name":"xyz.xremote.remote.XRemotePlayCommand",
   "allDeclaredFields":true
 },
 {
-  "name":"com.crazyxacker.apps.xremote.remote.XRemoteResponse",
+  "name":"xyz.xremote.remote.XRemoteResponse",
   "allDeclaredFields":true
 },
 {
@@ -704,7 +718,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllPublicConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getVgrow","parameterTypes":["com.crazyxacker.apps.xremote.controls.preferences.PreferenceSection"] }, {"name":"getVgrow","parameterTypes":["com.crazyxacker.apps.xremote.layout.InputGroup"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.Node"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.Parent"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.control.Control"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.control.Label"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.control.Labeled"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.control.Skinnable"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.layout.HBox"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.layout.Pane"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.layout.Region"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.layout.StackPane"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.layout.VBox"] }, {"name":"isVgrow","parameterTypes":["com.crazyxacker.apps.xremote.controls.preferences.PreferenceSection"] }, {"name":"isVgrow","parameterTypes":["com.crazyxacker.apps.xremote.layout.InputGroup"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.Parent"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.control.Control"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.control.Label"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.control.Labeled"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.control.Skinnable"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.layout.HBox"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.layout.Pane"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.layout.Region"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.layout.StackPane"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.layout.VBox"] }, {"name":"setAlignment","parameterTypes":["javafx.geometry.Pos"] }, {"name":"setMargin","parameterTypes":["com.crazyxacker.apps.xremote.layout.InputGroup","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["io.github.palexdev.materialfx.controls.MFXToggleButton","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["io.github.palexdev.materialfx.controls.base.MFXLabeled","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.Node","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.Parent","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.control.Control","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.control.Label","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.control.Labeled","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.control.Skinnable","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.control.Toggle","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.layout.HBox","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.layout.Pane","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.layout.Region","javafx.geometry.Insets"] }, {"name":"setSpacing","parameterTypes":["double"] }, {"name":"setVgrow","parameterTypes":["com.crazyxacker.apps.xremote.controls.preferences.PreferenceSection","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["com.crazyxacker.apps.xremote.controls.preferences.PreferenceSection","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["com.crazyxacker.apps.xremote.layout.InputGroup","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["com.crazyxacker.apps.xremote.layout.InputGroup","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["java.lang.Object","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.css.Styleable","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.event.EventTarget","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.Node","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.Node","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.Parent","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.Parent","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Control","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Control","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Label","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Label","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Labeled","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Labeled","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Skinnable","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Skinnable","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.HBox","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.HBox","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.Pane","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.Pane","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.Region","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.Region","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.StackPane","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.StackPane","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.VBox","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.VBox","javafx.scene.layout.Priority"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getVgrow","parameterTypes":["xyz.xremote.controls.preferences.PreferenceSection"] }, {"name":"getVgrow","parameterTypes":["xyz.xremote.layout.InputGroup"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.Node"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.Parent"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.control.Control"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.control.Label"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.control.Labeled"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.control.Skinnable"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.layout.HBox"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.layout.Pane"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.layout.Region"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.layout.StackPane"] }, {"name":"getVgrow","parameterTypes":["javafx.scene.layout.VBox"] }, {"name":"isVgrow","parameterTypes":["xyz.xremote.controls.preferences.PreferenceSection"] }, {"name":"isVgrow","parameterTypes":["xyz.xremote.layout.InputGroup"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.Parent"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.control.Control"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.control.Label"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.control.Labeled"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.control.Skinnable"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.layout.HBox"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.layout.Pane"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.layout.Region"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.layout.StackPane"] }, {"name":"isVgrow","parameterTypes":["javafx.scene.layout.VBox"] }, {"name":"setAlignment","parameterTypes":["javafx.geometry.Pos"] }, {"name":"setMargin","parameterTypes":["xyz.xremote.layout.InputGroup","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["io.github.palexdev.materialfx.controls.MFXToggleButton","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["io.github.palexdev.materialfx.controls.base.MFXLabeled","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.Node","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.Parent","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.control.Control","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.control.Label","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.control.Labeled","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.control.Skinnable","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.control.Toggle","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.layout.HBox","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.layout.Pane","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.layout.Region","javafx.geometry.Insets"] }, {"name":"setSpacing","parameterTypes":["double"] }, {"name":"setVgrow","parameterTypes":["xyz.xremote.controls.preferences.PreferenceSection","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["xyz.xremote.controls.preferences.PreferenceSection","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["xyz.xremote.layout.InputGroup","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["xyz.xremote.layout.InputGroup","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["java.lang.Object","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.css.Styleable","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.event.EventTarget","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.Node","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.Node","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.Parent","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.Parent","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Control","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Control","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Label","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Label","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Labeled","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Labeled","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Skinnable","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.control.Skinnable","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.HBox","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.HBox","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.Pane","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.Pane","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.Region","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.Region","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.StackPane","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.StackPane","javafx.scene.layout.Priority"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.VBox","java.lang.String"] }, {"name":"setVgrow","parameterTypes":["javafx.scene.layout.VBox","javafx.scene.layout.Priority"] }]
 },
 {
   "name":"javafx.scene.paint.Paint",
